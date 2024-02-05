@@ -1,0 +1,57 @@
+# Each line starts with a keyword:
+# - PARTICLE <x0.x> <x0.y> <fixed>
+# particles should be defined before beams because their order 
+# implicitly implies the index number used when defining the points in a beam
+# - BEAM <p0i (point 0's index)> <p1i (point 1's index)> <isRoad>
+# - CAR <x0.x> <x0.y> <mass> <damping> <radius> <finish point.x> <finish point.y> <v0>
+# including the car line will simulate the car too
+# GLOBAL mass, alpha, damping, radius, and threshold of bridge
+GLOBAL 1 0.016 1e-5 0.01 1.5e-6
+PARTICLE 0 0 1
+PARTICLE 0.5 0 0
+PARTICLE 1 0 0
+PARTICLE 1.5 0 0
+PARTICLE 2 0 0
+PARTICLE 2.5 0 0
+PARTICLE 3 0 0
+PARTICLE 3.5 0 0
+PARTICLE 4 0 1
+PARTICLE 0.5 -0.5 1
+PARTICLE 1 -0.5 1
+PARTICLE 1.5 -0.5 1
+PARTICLE 2 -0.5 1
+PARTICLE 2.5 -0.5 1
+PARTICLE 3 -0.5 1
+PARTICLE 3.5 -0.5 1
+BEAM 0 1 1
+BEAM 1 2 1
+BEAM 2 3 1
+BEAM 3 4 1
+BEAM 4 5 1
+BEAM 5 6 1
+BEAM 6 7 1
+BEAM 7 8 1
+#
+BEAM 1 9 0
+BEAM 2 10 0
+BEAM 3 11 0
+BEAM 4 12 0
+BEAM 5 13 0
+BEAM 6 14 0
+BEAM 7 15 0
+#
+BEAM 0 9 0
+BEAM 9 2 0
+BEAM 2 11 0
+BEAM 11 4 0
+BEAM 4 13 0
+BEAM 13 6 0
+BEAM 6 15 0
+BEAM 15 8 0
+BEAM 0 10 0
+BEAM 10 4 0
+BEAM 4 14 0
+BEAM 14 8 0
+BEAM 0 12 0
+BEAM 12 8 0
+CAR 0.05 0.05 0.01 1e-5 0.05 4 0 1
